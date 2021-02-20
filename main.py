@@ -7,10 +7,12 @@ from discord.ext import commands, tasks
 
 from keep_alive import keep_alive
 
+from Fun import Fun
+
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
 
-bot = commands.Bot(command_prefix=".", description="Sniff Bot is a General Purpose bot I guess")
+bot = commands.Bot(command_prefix=".", description="Sniff Bot is a General Purpose bot I guess\n\nAcknowledgements:\nThis bot has copied code from the following bots:\nCocánb bot\nSmetch bot")
 
 @bot.event
 async def on_ready():
@@ -18,14 +20,8 @@ async def on_ready():
     await bot.change_presence(status=discord.Status.idle,activity=activity)
     print("Bot is ready!")
 
-@bot.command(name="null", help="")
-async def null(ctx):
-  await ctx.send(chr(0))
-
-@bot.command(name="barry", help="Putain!!!!"):
-async def barry(ctx):
-  await ctx.send(<barry:812315535676932127>)
-
 keep_alive()
+
+bot.add_cog(Fun(bot))
 
 bot.run(TOKEN)
