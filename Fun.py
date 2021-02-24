@@ -17,7 +17,7 @@ class Fun(commands.Cog):
   async def echo(self, ctx, *, args):
     await ctx.send(args)
 
-  @commands.command(name="delecho", help="returns argument")
+  @commands.command(name="delecho", help="returns argument, but deletes your command first.")
   async def delecho(self, ctx, *, args):
     await ctx.message.delete()
     await ctx.send(args)
