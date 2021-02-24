@@ -26,6 +26,10 @@ async def on_ready():
 	await bot.change_presence(status=discord.Status.online, activity=activity)
 	print("Bot is ready!")
 
+@bot.event
+async def on_member_join(member):
+  pass
+
 
 keep_alive()
 
