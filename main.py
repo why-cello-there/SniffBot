@@ -22,8 +22,6 @@ bot = commands.Bot(
 
 @bot.event
 async def on_ready():
-	activity = discord.Game(name="IServ")
-	await bot.change_presence(status=discord.Status.online, activity=activity)
 	print("Bot is ready!")
 
 @bot.event
