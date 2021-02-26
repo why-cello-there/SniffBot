@@ -9,7 +9,6 @@ from keep_alive import keep_alive
 
 from Fun import Fun
 from Meta import Meta
-from Moderation import Moderation
 from Server import Server
 
 load_dotenv()
@@ -33,7 +32,6 @@ keep_alive()
 
 bot.add_cog(Fun(bot))
 bot.add_cog(Meta(bot))
-bot.add_cog(Moderation(bot))
 bot.add_cog(Server(bot))
 
 bot.run(TOKEN)
