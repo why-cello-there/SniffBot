@@ -23,12 +23,12 @@ bot = commands.Bot(
 async def on_ready():
 	print("Bot is ready!")
 
-@bot.event # make this work pls
+@bot.event
 async def on_member_join(member):
   channel = discord.utils.get(member.guild.channels, id = 795609115492876298)
   await channel.send(f"Welcome to Why Cello There, <@{member.id}>! Make sure to join all of the servers in <#812269573323227176>. You can also ~~join in on the pyramid scheme and~~ write `$join @username` of the person who invited you. Have fun!")
 
-@bot.event # make this work pls
+@bot.event 
 async def on_member_remove(member): 
   channel = discord.utils.get(member.guild.channels, id = 795609115492876298)
   await channel.send(f"<@{member.id}> just left! They will certainly not be missed.")
