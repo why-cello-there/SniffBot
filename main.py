@@ -16,7 +16,7 @@ TOKEN = os.getenv("TOKEN")
 
 bot = commands.Bot(
     command_prefix=".",
-    description="Sniff Bot is the bot for the Why Cello There server.")
+    description="Sniff Bot is the bot for the Why Cello There server.", intents=discord.Intents.all())
 
 
 @bot.event

@@ -21,3 +21,5 @@ class Fun(commands.Cog):
   async def delecho(self, ctx, *, args):
     await ctx.message.delete()
     await ctx.send(args)
+    
+  
