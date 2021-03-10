@@ -1,7 +1,7 @@
 import discord
 import os
-from replit import db
 
+from replit import db
 from dotenv import load_dotenv
 from discord.ext import commands, tasks
 
@@ -26,12 +26,12 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
   channel = discord.utils.get(member.guild.channels, id = 795609115492876298)
-  await channel.send(f"Welcome to Why Cello There, <@{member.id}>! Make sure to join all of the servers in <#812269573323227176>. You can also ~~join in on the pyramid scheme and~~ write `$join @username` of the person who invited you. Have fun!")
+  await channel.send(f"Welcome to Why Cello There, <@{member.id}>! Make sure to join all of the servers in the partnered channels. You can also ~~join in on the pyramid scheme and~~ write `$join @username` of the person who invited you. Have fun!")
 
 @bot.event 
 async def on_member_remove(member): 
   channel = discord.utils.get(member.guild.channels, id = 795609115492876298)
-  await channel.send(f"<@{member.id}> just left! They will certainly not be missed.")
+  await channel.send(f"<@{member.id}> just left! Let us all wish them an absolutely terrible day.")
 
 keep_alive()
 
